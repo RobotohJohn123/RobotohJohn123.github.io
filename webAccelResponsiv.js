@@ -14,9 +14,8 @@ let ned = true;
 let rystet = 0;
 let flyttet = 0;
 let img;
-let billede = [];
+let billede = ['breaking0.png','breaking1.png','breaking2.png'];
 let billeder = random(billede); 
-let asdfadsf;
 
 function preload(){
     img = loadImage('breaking0.png'); 
@@ -58,11 +57,13 @@ function draw() {
     if (y >= height || y <= 0)
         ned = !ned;
     if (accelerationX > 70) {
-        loadImage(billeder)
+        img = loadImage(billeder)
         if(rystet%2 == 0)
         ned = !ned;
         rystet++;
     }
+
+    image(img, 0, 0);
     
 text('Shaken: ' + str(rystet), 50, height-100);
 text(': ' + str(flyttet),50, height-50);
