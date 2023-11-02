@@ -16,7 +16,7 @@ let flyttet = 0;
 let img;
 let billede = [];
 let billeder = random(billede); 
-
+let asdfadsf;
 
 function preload(){
     img = loadImage('breaking0.png'); 
